@@ -29,5 +29,5 @@ while True:
     packet = f"{device_id}:".encode() + iq_bytes
     sock.sendall(packet)
 
-    packet_count += 1  # 计数
-    print(f"正在发送数据包 {packet_count}...")
+    # packet_count += 1  # 计数
+    # print(f"正在发送数据包 {packet_count}...")

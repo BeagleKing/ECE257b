@@ -3,6 +3,7 @@ import numpy as np
 import signal
 import sys
 import os
+import time
 
 server_ip = "67.58.54.136"  # 替换为接收端 IP
 server_port = 2000
@@ -29,6 +30,6 @@ while True:
     packet = f"{device_id}:".encode() + iq_bytes
     sock.sendall(packet)
 
-    # time.sleep(0.01)
+    time.sleep(0.01)
     packet_count += 1  # 计数
     print(f"正在发送数据包 {packet_count}...")

@@ -3,6 +3,7 @@ import numpy as np
 import signal
 import sys
 import os
+import time
 
 server_ip = "67.58.54.136"  # 替换为接收端 IP
 server_port = 42672

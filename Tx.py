@@ -5,7 +5,7 @@ import sys
 import os
 
 server_ip = "67.58.54.136"  # 替换为接收端 IP
-server_port = 2000
+server_port = 42672
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((server_ip, server_port))
@@ -29,5 +29,6 @@ while True:
     packet = f"{device_id}:".encode() + iq_bytes
     sock.sendall(packet)
 
-    # packet_count += 1  # 计数
-    # print(f"正在发送数据包 {packet_count}...")
+    time.sleep(0.01)
+    packet_count += 1  # 计数
+    print(f"正在发送数据包 {packet_count}...")

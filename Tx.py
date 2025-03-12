@@ -7,7 +7,7 @@ import os
 server_ip = "67.58.54.136"  # 替换为接收端 IP
 server_port = 2000
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((server_ip, server_port))
 
 device_id = os.getenv("DEVICE_ID", "device_01")

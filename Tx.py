@@ -5,7 +5,7 @@ import sys
 import os
 
 server_ip = "67.58.54.136"  # 替换为接收端 IP
-server_port = 5353
+server_port = 2000
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.connect((server_ip, server_port))
